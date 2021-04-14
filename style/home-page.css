@@ -1,0 +1,289 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 2rem 0 1rem 0;
+  height: 20vh;
+}
+
+main {
+  height: 80vh;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+
+.welcome-headline {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+
+  margin: 3.5rem 0 0 2rem;
+
+  width: 294px;
+  height: 133px;
+
+  color: #333333;
+}
+
+.selection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+
+.selection > p {
+  margin-top: 1.5rem;
+}
+
+.btn-role {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 1.5rem 0 0rem 0;
+  width: 14rem;
+  height: 2.7rem;
+
+  background: var(--emge-red);
+  border: none;
+  border-radius: 1rem;
+
+  font-family: Lato, sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.btn-role > a {
+  color: white;
+}
+
+.btn-role:hover,
+a:hover {
+  background-color: #002e3b;
+  transition: 0.2s;
+  color: var(--emge-red);
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  header > img {
+    width: 20rem;
+  }
+
+  .welcome-headline {
+    font-size: 28px;
+  }
+
+  .selection > p {
+    font-size: 16px;
+    margin-top: 5rem;
+  }
+
+  .btn-role {
+    width: 20rem;
+    height: 3rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  header {
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0 0 2rem;
+  }
+
+  header > img {
+    width: 25rem;
+  }
+
+  .welcome-headline {
+    width: 50%;
+    height: 18rem;
+
+    font-size: 3rem;
+    line-height: 3rem;
+
+    margin-bottom: 1rem;
+  }
+
+  .selection > p {
+    font-size: 1.8rem;
+  }
+
+  .btn-role {
+    width: 30rem;
+    height: 4rem;
+
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  body {
+    background-image: url("../assets/resume-folder-cuate.svg");
+    background-size: 40rem 120rem;
+    background-repeat: no-repeat;
+    background-position-x: 14rem;
+    background-position-y: 8rem;
+
+    overflow-y: scroll;
+  }
+
+  header > img {
+    width: 32rem;
+  }
+
+  .welcome-headline {
+    width: 60%;
+    height: 10rem;
+
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  .selection > p {
+    font-size: 2.5rem;
+  }
+
+  .btn-role {
+    width: 40rem;
+    height: 4.5rem;
+
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  body {
+    background-image: url("../assets/resume-folder-cuate.svg");
+    background-size: 40rem 40rem;
+    background-repeat: no-repeat;
+    background-position-x: 40rem;
+    background-position-y: 10rem;
+
+    overflow-y: scroll;
+  }
+
+  header {
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 1rem 0 0 3rem;
+  }
+
+  header > img {
+    width: 20rem;
+  }
+
+  .container {
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    width: 70rem;
+    margin: 0 0 0 10rem;
+  }
+
+  .welcome-headline {
+    width: 40%;
+    height: 10rem;
+
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .selection {
+    align-items: flex-start;
+  }
+
+  .selection > p {
+    font-size: 1.5rem;
+  }
+
+  .btn-role {
+    width: 23rem;
+    height: 4rem;
+
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  body {
+    background-image: url("../assets/resume-folder-cuate.svg");
+    background-size: 50rem 50rem;
+    background-repeat: no-repeat;
+    background-position-x: 40rem;
+
+    overflow-y: scroll;
+  }
+
+  header {
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 1rem 0 0 3rem;
+  }
+
+  header > img {
+    width: 20rem;
+  }
+
+  .container {
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    width: 70rem;
+    margin: 0 0 0 10rem;
+  }
+
+  .welcome-headline {
+    width: 50%;
+    height: 10rem;
+
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  .selection {
+    align-items: flex-start;
+  }
+
+  .selection > p {
+    font-size: 1.8rem;
+  }
+
+  .btn-role {
+    width: 25rem;
+    height: 4rem;
+
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  body {
+    background-image: url("../assets/resume-folder-cuate.svg");
+    background-size: 70rem 70rem;
+    background-repeat: no-repeat;
+    background-position-x: 50rem;
+
+    overflow-y: scroll;
+  }
+
+  .welcome-headline {
+    width: 50%;
+    height: 15rem;
+
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+
+  .selection > p {
+    font-size: 2rem;
+  }
+}

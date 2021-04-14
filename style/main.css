@@ -1,0 +1,25 @@
+:root {
+  --dark-gray: #555555;
+  --dark-blue: #002e3b;
+  --emge-black: #333333;
+  --emge-red: #cc3547;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 93.75%; /* 15px */
+}
+
+body {
+  background: #e5e5e5;
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  border: none;
+}
