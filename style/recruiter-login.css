@@ -12,7 +12,7 @@ header {
   margin: 10px 8px 0 8px;
 }
 
-.createAccount-header {
+.btn-createAccount-header {
   color: #002e3b;
 
   font-size: 12px;
@@ -21,7 +21,7 @@ header {
   cursor: pointer;
 }
 
-.createAccount-header:hover {
+.btn-createAccount-header:hover {
   color: #cc3547;
   transition: 0.5s;
 }
@@ -30,13 +30,6 @@ header {
 
 main {
   height: 80vh;
-}
-
-img.logo {
-  position: relative;
-  left: 10%;
-
-  margin-left: 30px;
 }
 
 .container {
@@ -53,7 +46,7 @@ img.logo {
 
   margin: 1.5rem 0 0 2rem;
 
-  width: 294px;
+  width: 19rem;
 
   color: #333333;
 }
@@ -92,6 +85,7 @@ img.logo {
 
 .btn-forgot-password {
   display: flex;
+  align-items: flex-end;
 
   margin: -14px 0 3rem 185px;
 
@@ -120,9 +114,6 @@ img.logo {
 }
 
 /* Footer */
-footer {
-  height: 10vh;
-}
 
 .createAccount-footer {
   display: flex;
@@ -140,4 +131,133 @@ footer {
 .createAccount-footer:hover {
   color: #cc3547;
   transition: 0.5s;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .header-btns {
+    font-size: 1rem;
+  }
+
+  .welcome-headline {
+    margin-top: 0.5rem;
+    font-size: 1.5;
+  }
+
+  .login-entry {
+    width: 18rem;
+    height: 1.2rem;
+  }
+
+  .btn-forgot-password {
+    font-size: 0.9rem;
+  }
+
+  .btn-login {
+    width: 15rem;
+    height: 3rem;
+  }
+
+  .createAccount-footer {
+    font-size: 0.9rem;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .header-btns {
+    font-size: 1.2rem;
+  }
+
+  .welcome-headline {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    width: 20rem;
+  }
+
+  .login-entry {
+    width: 19rem;
+    height: 1.4rem;
+  }
+
+  .btn-forgot-password {
+    font-size: 0.9rem;
+  }
+
+  .btn-login {
+    width: 16rem;
+    height: 3.4rem;
+  }
+
+  .createAccount-footer {
+    font-size: 1rem;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .header-btns {
+    font-size: 1.4rem;
+  }
+
+  .welcome-headline {
+    margin-bottom: 1.3rem;
+    font-size: 1.7rem;
+    line-height: 2rem;
+    width: 22rem;
+  }
+
+  .login-entry {
+    width: 20rem;
+    height: 1.6rem;
+  }
+
+  .btn-forgot-password {
+    font-size: 1rem;
+  }
+
+  .btn-login {
+    width: 18rem;
+    height: 3.7rem;
+    margin-top: 6rem;
+  }
+
+  .createAccount-footer {
+    font-size: 1.2rem;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .header-btns {
+    font-size: 1.6rem;
+  }
+
+  .welcome-headline {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    width: 26rem;
+  }
+
+  .login-entry {
+    width: 24rem;
+    height: 2rem;
+  }
+
+  .btn-forgot-password {
+    font-size: 1rem;
+    padding-left: 6rem;
+  }
+
+  .btn-login {
+    width: 20rem;
+    height: 4rem;
+    margin-top: 2rem;
+  }
+
+  .createAccount-footer {
+    font-size: 1rem;
+  }
 }
