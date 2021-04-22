@@ -189,6 +189,7 @@ main {
   .btn-login {
     width: 16rem;
     height: 3.4rem;
+    cursor: pointer;
   }
 
   .createAccount-footer {
