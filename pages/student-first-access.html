@@ -25,9 +25,184 @@
   </head>
   <body>
     <!--Header-->
-    <header></header>
+    <header>
+      <button type="button">
+        <img src="../assets/back-image.svg" alt="Voltar" />
+      </button>
+    </header>
     <!--Container Principal-->
-    <main></main>
+    <main>
+      <h1>
+        <p>Oi, Aluno!</p>
+        <p>
+          Como é o seu primeiro acesso, começaremos com a criação do seu
+          currículo. :)
+        </p>
+      </h1>
+
+      <p>Primeiro, vamos inserir uma imagem em seu perfil:</p>
+
+      <form action="" autocomplete="on" id="cv-form">
+        <!--Inserção de Foto-->
+        <img src="../assets/add-pic.svg" alt="Adicione sua foto aqui" />
+
+        <div class="insert-photo">
+          <label for="add-photo">Adicione sua foto: </label>
+          <input
+            type="file"
+            accept="image/*"
+            value="Adicione sua foto"
+            id="add-photo"
+          />
+
+          <button type="button" id="jump-next-button">
+            <a href="">Pular</a>
+          </button>
+        </div>
+
+        <p>Agora, começaremos a preencher seus dados curriculares!</p>
+        <!--Informações Pessoais-->
+        <div class="personal-informations">
+          <h2>Informações Pessoais:</h2>
+            <label for="name">Digite o seu nome*:</label>
+            <input
+              type="text"
+              placeholder="Nome"
+              autocomplete="on"
+              required
+              id="name"
+            />
+            <label for="name">Data de Nascimento*:</label>
+            <input
+              type="date"
+              placeholder="Data de Nascimento"
+              value="Data de nascimento"
+              id="birth-date"
+              required
+            />
+            <label for="civil-state">Estado Civil:</label>
+
+            <input
+              type="radio"
+              id="single"
+              name="civil-state"
+              value="Solteiro"
+            />
+            <label for="single">Solteiro(a)</label><br />
+            <input
+              type="radio"
+              id="married"
+              name="civil-state"
+              value="Casado"
+            />
+            <label for="married">Casado(a)</label><br />
+            <input
+              type="radio"
+              id="divorced"
+              name="civil-state"
+              value="Divorciado"
+            />
+            <label for="divorced">Divorciado(a)</label>
+
+            <input
+              type="radio"
+              id="widow"
+              name="civil-state"
+              value="Viúvo(a)"
+            />
+            <label for="widow">Viúvo(a)</label>
+
+            <input
+              type="radio"
+              id="separated"
+              name="civil-state"
+              value="Separado"
+            />
+            <label for="separated">Separado(a) Judicialmente</label>
+
+            <label for="nationality">Nacionalidade:</label>
+            <input type="text" required id="nationality" placeholder="Ex: Brasileiro, Argentino" />
+
+            <label for="gender">Gênero*:</label>
+
+            <input type="radio" id="male" name="gender" value="male" />
+            <label for="male">Male</label><br />
+            <input type="radio" id="female" name="gender" value="female" />
+            <label for="female">Female</label><br />
+            <input type="radio" id="other" name="gender" value="other" />
+            <label for="other">Other</label>
+          </p>
+        </div>
+
+        <div class="adress">
+          <h2>Endereço:</h2>
+          <label for="">CEP*: </label>
+          <input id="cep" type="text" placeholder="Código Postal" required>
+
+          <label for="street">Logradouro*:</label>
+          <input type="text" id="street" placeholder="Rua, Avenida, Beco.." required>
+
+          <label for="district">Bairro*:</label>
+          <input type="text" id="district" required>
+
+          <label for="city">Cidade*: </label>
+          <input type="text" id="city" required>
+
+          <label for="state">Estado*:</label>
+          <input type="text" id="state" placeholder="Ex: Minas Gerais..">
+
+        </div class="contacts">
+            <h2>Contatos: </h2>
+
+            <label for="email">E-mail*: </label>
+            <input 
+            type="email" 
+            id ="email"
+            autocomplete="on" 
+            placeholder="Seu e-mail principal" 
+            required
+            >
+
+            <label for="tel">Telefone*: </label>
+            <input 
+            type="tel" 
+            id="tel" 
+            autocomplete="on" 
+            placeholder="(XX) XXXXX-XXX" 
+            required
+            >
+
+            <label for="linkedin">Linkedin: </label>
+            <input 
+            type="url" 
+            id="linkedin"
+            placeholder="Link do perfil"
+            >
+
+            <label for="facebook">Facebook: </label>
+            <input 
+            type="url" 
+            id="facebook"
+            placeholder="Link do perfil"
+            >
+
+            <label for="instagram">Instagram: </label>
+            <input 
+            type="url"
+            id="instagram"
+            placeholder="Link do perfil"
+            >
+
+            <label for="other-social-media">Outra Rede Social: </label>
+            <input 
+            type="url"
+            id="other-social-media"
+            placeholder="Outra rede à sua escolha"
+            >
+        <div>
+        </div>
+      </form>
+    </main>
 
     <!--Footer -->
     <footer></footer>
