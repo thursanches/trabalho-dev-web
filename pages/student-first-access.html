@@ -31,7 +31,7 @@
       </button>
     </header>
     <!--Container Principal-->
-    <main>
+  <main>
       <h1>
         <p>Oi, Aluno!</p>
         <p>
@@ -41,7 +41,7 @@
       </h1>
 
       <p>Primeiro, vamos inserir uma imagem em seu perfil:</p>
-
+      <section class="formulary">
       <form action="" autocomplete="on" id="cv-form">
         <!--Inserção de Foto-->
         <img src="../assets/add-pic.svg" alt="Adicione sua foto aqui" />
@@ -62,8 +62,8 @@
 
         <p>Agora, começaremos a preencher seus dados curriculares!</p>
         <!--Informações Pessoais-->
-        <div class="personal-informations">
-          <h2>Informações Pessoais:</h2>
+        <fieldset class="personal-informations">
+          <legend>Informações Pessoais:</legend>
             <label for="name">Digite o seu nome*:</label>
             <input
               type="text"
@@ -132,10 +132,11 @@
             <input type="radio" id="other" name="gender" value="other" />
             <label for="other">Other</label>
           </p>
-        </div>
+        </fieldset>
 
-        <div class="adress">
-          <h2>Endereço:</h2>
+        <!-- Endereço -->
+        <fieldset class="adress">
+          <legend>Endereço:</legend>
           <label for="">CEP*: </label>
           <input id="cep" type="text" placeholder="Código Postal" required>
 
@@ -150,9 +151,11 @@
 
           <label for="state">Estado*:</label>
           <input type="text" id="state" placeholder="Ex: Minas Gerais..">
+        </fieldset>
 
-        </div class="contacts">
-            <h2>Contatos: </h2>
+        <!-- Contatos -->
+        <fieldset class="contacts">
+            <legend>Contatos: </legend>
 
             <label for="email">E-mail*: </label>
             <input 
@@ -199,10 +202,139 @@
             id="other-social-media"
             placeholder="Outra rede à sua escolha"
             >
-        <div>
-        </div>
+
+        </fieldset>
+
+        <!-- Sobre mim -->
+
+        <fieldset class="about-me">
+          <legend>Sobre mim: </legend>
+
+          <label for="description">Descrição: </label>
+          <textarea 
+            name="about-me" 
+            id="description" 
+            cols="30" 
+            rows="10" 
+            maxlength="500" 
+            placeholder="Conte mais sobre você para que as empresas possam conhecê-lo melhor!">
+          </textarea>
+
+          <label for="presentation-video">Vídeo de apresentação:</label>
+          <input 
+            type="file"
+            id="presentation-video"
+            type="file"
+            accept="video/*"
+            value="Adicione seu video"
+          >
+        </fieldset>
+
+        <!-- Pessoa com deficiência -->
+        <fieldset class="deficiency">
+          <legend for="deficient-person">Pessoa com Deficiência?</legend>
+
+          <input type="checkbox" id="positive" name="deficient-person" value="Sim" >
+          <label for="positive">Sim</label>
+
+          <input type="checkbox" id="negative" name="deficient-person" value="Não">
+          <label for="negative">Não</label>
+
+          <label for="if-affirmative">Se sim, qual o tipo de deficiência?</label>
+          <input type="text" id="if-affirmative">
+        </fieldset>
+
+        <!--Formação Acadêmica-->
+        <fieldset class="academic-situation">
+          <legend>Formação Acadêmica</legend>
+
+          <label for="schooling">Nível de Escolaridade: </label>
+          <select required name="schooling" id="schooling">
+            <option value="Ensino Fundamental Incompleto">
+              Ensino Fundamental Incompleto
+            </option>
+            <option value="Ensino Fundamental Completo">
+              Ensino Fundamental Completo
+            </option>
+            <option value="Ensino Médio Incompleto">
+              Ensino Médio Incompleto
+            </option>
+            <option value="Ensino Médio Completo">
+              Ensino Médio Completo
+            </option>
+            <option selected value="Ensino Superior Incompleto">
+              Ensino Superior Incompleto
+            </option>
+            <option value="Ensino Superior Completo">
+              Ensino Superior Completo
+            </option>
+          </select>
+
+
+          <label for="graduation-type">Tipo de Formação: </label>
+          <select name="graduation-type" id="graduation-type">
+            <option selected value="Bacharelado">
+              Bacharelado
+            </option>
+            <option value="Licenciatura">
+              Licenciatura
+            </option>
+            <option value="Tecnólogo">
+              Tecnólogo
+            </option>
+            <option value="Especialização">
+              Especialização
+            </option>
+            <option value="MBA">
+              MBA
+            </option>
+            <option value="Mestrado">
+              Mestrado
+            </option>
+            <option value="Doutorado">
+              Doutorado
+            </option>
+            <option value="Pós-doutorado">
+              Pós-doutorado
+            </option>
+          </select>
+
+
+          <label for="institution">Instituição de Ensino: </label>
+          <input type="text" name="institution" id="institution" placeholder="Nome da instituição">
+
+          <label for="course">Curso: </label>
+          <input type="text" name="course" id="course" placeholder="Nome do curso">
+
+          <label for="beginning-date">Data de Início: </label>
+          <input type="date">
+
+
+          <label for="finishing-date">Término</label>
+          <input type="date" name="finishing-date" id="finishing-date">
+
+          <button>
+            <span>Adicione uma nova formação</span>
+            <img src="../assets/add-formation.svg" alt="Adicione uma nova formação">
+          </button>
+        </fieldset>
+
+        <!--Objetivos Profissionais-->
+        <fieldset class="objective">
+          <legend>Objetivos profissionais: </legend>
+
+          <textarea name="professional-objective" id="professional-objective" cols="30" rows="10" required placeholder="Detalhe seus objetivos profissionais"></textarea>
+        </fieldset>
+
+      <!--Habilidades-->
+      <fieldset class="skills">
+        <legend>Habilidades</legend>
+        <textarea name="personal-skills" id="personal-skills" cols="30" rows="10" placeholder="Detalhe hard e soft skills que possui!"></textarea>
+      </fieldset>
+        
       </form>
-    </main>
+    </section>
+  </main>
 
     <!--Footer -->
     <footer></footer>
