@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Base de Currículos - EMGE</title>
+
+    <!--Styles e fonte-->
+
+    <link
+      rel="shortcut icon"
+      href="../assets/job-search.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../style/main.css" />
+    <link rel="stylesheet" href="../style/criar-conta-recrutador.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!--Header-->
+    <header>
+      <div class="header-btns">
+        <button class="btn-back">
+          <a href="./recruiter-login.html">
+            <img
+              src="../assets/back-image.svg"
+              alt="Voltar para a página anterior"
+              role="button"
+            />
+          </a>
+        </button>
+      </div>
+    </header>
+    <!--Container Principal-->
+    <main>
+      <section class="container">
+        <h1 class="welcome-headline">
+          <p>Crie sua conta</p>
+        </h1>
+        <!-- Formulário de login -->
+        <form action="" class="login-form">
+            <label for="name">Nome:</label>
+            <input
+              type="name"
+              id="name"
+              class="login-entry"
+              placeholder="Digite o seu nome Completo"
+              autocomplete="on"
+              autofocus
+              required
+            />
+
+            <label for="e-mail">E-mail:</label>
+            <input
+              type="email"
+              id="email"
+              class="login-entry"
+              placeholder="Digite seu e-mail"
+              autocomplete="on"
+              autofocus
+              required
+            />
+
+            
+
+            <label for="Confirme">Confirme o e-mail:</label>
+            <input
+              type="email"
+              id="confirme"
+              class="login-entry"
+              placeholder="Confirmação"
+              autocomplete="on"
+              autofocus
+              required
+            />
+
+            <label for="password">Senha:</label>
+            <input
+              type="password"
+              id="password"
+              class="login-entry"
+              placeholder="Digite sua senha"
+              autocomplete="on"
+              maxlength="10"
+              minlength="4"
+              autofocus
+              required
+            />
+
+            <label for="password">Confirme a Senha:</label>
+            <input
+              type="password"
+              id="password"
+              class="login-entry"
+              placeholder="Confirmação"
+              autocomplete="on"
+              maxlength="10"
+              minlength="4"
+              autofocus
+              required
+            />
+
+            <label for="enterprise">Empresa:</label>
+            <input
+              type="enterprise"
+              id="enterprise"
+              class="login-entry"
+              placeholder="Digite o nome da empresa"
+              autocomplete="on"
+              autofocus
+              required
+            />
+            <br />
+
+            <!--
+          <input type="submit" value="Criar Conta" class="btn-login" />
+        -->
+
+            <a
+              href="./landing-page-recrutador.html"
+              value="Criar Conta"
+              class="btn-login"
+              >Criar Conta</a
+            >
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

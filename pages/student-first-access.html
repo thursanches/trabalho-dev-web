@@ -15,7 +15,7 @@
     />
 
     <link rel="stylesheet" href="../style/main.css" />
-    <link rel="stylesheet" href="../style/recruiter-login.css" />
+    <link rel="stylesheet" href="../style/student-first-access.css" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -26,13 +26,13 @@
   <body>
     <!--Header-->
     <header>
-      <button type="button">
+      <a href="./student-login.html">
         <img src="../assets/back-image.svg" alt="Voltar" />
-      </button>
+      </a>
     </header>
     <!--Container Principal-->
   <main>
-      <h1>
+      <h1 class="welcome-message">
         <p>Oi, Aluno!</p>
         <p>
           Como é o seu primeiro acesso, começaremos com a criação do seu
@@ -40,41 +40,43 @@
         </p>
       </h1>
 
-      <p>Primeiro, vamos inserir uma imagem em seu perfil:</p>
+      <p class="image-instruction">Primeiro, vamos inserir uma imagem em seu perfil:</p>
       <section class="formulary">
       <form action="" autocomplete="on" id="cv-form">
         <!--Inserção de Foto-->
-        <img src="../assets/add-pic.svg" alt="Adicione sua foto aqui" />
-
         <div class="insert-photo">
+          <img src="../assets/add-pic.svg" alt="Adicione sua foto aqui"/>
+
+        
           <label for="add-photo">Adicione sua foto: </label>
           <input
             type="file"
             accept="image/*"
             value="Adicione sua foto"
             id="add-photo"
+            class="add-photo"
           />
 
-          <button type="button" id="jump-next-button">
-            <a href="">Pular</a>
-          </button>
+            <a href="#name" class="jump-next-button">Pular</a>
         </div>
 
         <p>Agora, começaremos a preencher seus dados curriculares!</p>
         <!--Informações Pessoais-->
         <fieldset class="personal-informations">
-          <legend>Informações Pessoais:</legend>
+          <legend> Informações Pessoais </legend>
             <label for="name">Digite o seu nome*:</label>
             <input
               type="text"
               placeholder="Nome"
               autocomplete="on"
               required
+              class="text-input"
               id="name"
             />
             <label for="name">Data de Nascimento*:</label>
             <input
               type="date"
+              class="text-input"
               placeholder="Data de Nascimento"
               value="Data de nascimento"
               id="birth-date"
@@ -82,85 +84,100 @@
             />
             <label for="civil-state">Estado Civil:</label>
 
+
+            <label for="single">Solteiro(a)</label><br />
             <input
               type="radio"
               id="single"
               name="civil-state"
               value="Solteiro"
+              class="radio-input"
             />
-            <label for="single">Solteiro(a)</label><br />
+            
+            <label for="married">Casado(a)</label><br />
             <input
               type="radio"
               id="married"
               name="civil-state"
               value="Casado"
+              class="radio-input"
             />
-            <label for="married">Casado(a)</label><br />
+            
+            <label for="divorced">Divorciado(a)</label>
             <input
               type="radio"
               id="divorced"
               name="civil-state"
               value="Divorciado"
+              class="radio-input"
             />
-            <label for="divorced">Divorciado(a)</label>
-
+            
+            <label for="widow">Viúvo(a)</label>
             <input
               type="radio"
               id="widow"
               name="civil-state"
               value="Viúvo(a)"
+              class="radio-input"
             />
-            <label for="widow">Viúvo(a)</label>
-
+            
+            <label for="separated">Separado(a) Judicialmente</label>
             <input
               type="radio"
               id="separated"
               name="civil-state"
               value="Separado"
+              class="radio-input"
             />
-            <label for="separated">Separado(a) Judicialmente</label>
+            
 
             <label for="nationality">Nacionalidade:</label>
-            <input type="text" required id="nationality" placeholder="Ex: Brasileiro, Argentino" />
+            <input type="text" required 
+            class="text-input" id="nationality" placeholder="Ex: Brasileiro, Argentino" />
 
             <label for="gender">Gênero*:</label>
 
-            <input type="radio" id="male" name="gender" value="male" />
             <label for="male">Male</label><br />
-            <input type="radio" id="female" name="gender" value="female" />
+            <input type="radio" class="radio-input" id="male" name="gender" value="male" />
+            
             <label for="female">Female</label><br />
-            <input type="radio" id="other" name="gender" value="other" />
+            <input type="radio" class="radio-input" id="female" name="gender" value="female" />
+            
             <label for="other">Other</label>
+            <input type="radio" class="radio-input" id="other" name="gender" value="other" />
+            
           </p>
         </fieldset>
 
         <!-- Endereço -->
         <fieldset class="adress">
-          <legend>Endereço:</legend>
+          <legend>Endereço</legend>
           <label for="">CEP*: </label>
-          <input id="cep" type="text" placeholder="Código Postal" required>
+          <input id="cep" type="text" 
+          class="text-input" placeholder="Código Postal" required>
 
           <label for="street">Logradouro*:</label>
-          <input type="text" id="street" placeholder="Rua, Avenida, Beco.." required>
+          <input type="text"  class="text-input" id="street" placeholder="Rua, Avenida, Beco.." required>
 
           <label for="district">Bairro*:</label>
-          <input type="text" id="district" required>
+          <input type="text"  class="text-input" id="district" required>
 
           <label for="city">Cidade*: </label>
-          <input type="text" id="city" required>
+          <input type="text" class="text-input" id="city" required>
 
           <label for="state">Estado*:</label>
-          <input type="text" id="state" placeholder="Ex: Minas Gerais..">
+          <input type="text" class="text-input" id="state" placeholder="Ex: Minas Gerais..">
         </fieldset>
 
         <!-- Contatos -->
         <fieldset class="contacts">
-            <legend>Contatos: </legend>
+            <legend>Contatos </legend>
 
             <label for="email">E-mail*: </label>
             <input 
             type="email" 
             id ="email"
+            class="text-input"
             autocomplete="on" 
             placeholder="Seu e-mail principal" 
             required
@@ -169,6 +186,7 @@
             <label for="tel">Telefone*: </label>
             <input 
             type="tel" 
+            class="text-input"
             id="tel" 
             autocomplete="on" 
             placeholder="(XX) XXXXX-XXX" 
@@ -178,6 +196,7 @@
             <label for="linkedin">Linkedin: </label>
             <input 
             type="url" 
+            class="text-input"
             id="linkedin"
             placeholder="Link do perfil"
             >
@@ -185,6 +204,7 @@
             <label for="facebook">Facebook: </label>
             <input 
             type="url" 
+            class="text-input"
             id="facebook"
             placeholder="Link do perfil"
             >
@@ -192,6 +212,7 @@
             <label for="instagram">Instagram: </label>
             <input 
             type="url"
+            class="text-input"
             id="instagram"
             placeholder="Link do perfil"
             >
@@ -199,6 +220,7 @@
             <label for="other-social-media">Outra Rede Social: </label>
             <input 
             type="url"
+            class="text-input"
             id="other-social-media"
             placeholder="Outra rede à sua escolha"
             >
@@ -208,7 +230,7 @@
         <!-- Sobre mim -->
 
         <fieldset class="about-me">
-          <legend>Sobre mim: </legend>
+          <legend>Sobre mim </legend>
 
           <label for="description">Descrição: </label>
           <textarea 
@@ -234,22 +256,23 @@
         <fieldset class="deficiency">
           <legend for="deficient-person">Pessoa com Deficiência?</legend>
 
-          <input type="checkbox" id="positive" name="deficient-person" value="Sim" >
           <label for="positive">Sim</label>
-
-          <input type="checkbox" id="negative" name="deficient-person" value="Não">
+          <input type="checkbox" id="positive" name="deficient-person" value="Sim" >
+          
           <label for="negative">Não</label>
+          <input type="checkbox" id="negative" name="deficient-person" value="Não">
+          
 
           <label for="if-affirmative">Se sim, qual o tipo de deficiência?</label>
-          <input type="text" id="if-affirmative">
+          <input type="text" class="text-input" id="if-affirmative">
         </fieldset>
 
         <!--Formação Acadêmica-->
         <fieldset class="academic-situation">
-          <legend>Formação Acadêmica</legend>
+          <legend>Formação Acadêmica </legend>
 
           <label for="schooling">Nível de Escolaridade: </label>
-          <select required name="schooling" id="schooling">
+          <select class="text-input" required name="schooling" id="schooling">
             <option value="Ensino Fundamental Incompleto">
               Ensino Fundamental Incompleto
             </option>
@@ -272,7 +295,7 @@
 
 
           <label for="graduation-type">Tipo de Formação: </label>
-          <select name="graduation-type" id="graduation-type">
+          <select class="text-input" name="graduation-type" id="graduation-type">
             <option selected value="Bacharelado">
               Bacharelado
             </option>
@@ -301,17 +324,18 @@
 
 
           <label for="institution">Instituição de Ensino: </label>
-          <input type="text" name="institution" id="institution" placeholder="Nome da instituição">
+          <input class="text-input" type="text" name="institution" id="institution" placeholder="Nome da instituição">
 
           <label for="course">Curso: </label>
-          <input type="text" name="course" id="course" placeholder="Nome do curso">
+          <input class="text-input" type="text" name="course" id="course" placeholder="Nome do curso">
 
-          <label for="beginning-date">Data de Início: </label>
-          <input type="date">
+          <label for="beginning-academic-date">Data de Início: </label>
+          <input type="date"  class="text-input" id="beginning-academic-date">
 
 
-          <label for="finishing-date">Término</label>
-          <input type="date" name="finishing-date" id="finishing-date">
+          <label for="finishing-academic-date">Término</label>
+          <input type="date" name="finishing-academic-date" id="finishing-academic-date"
+          class="text-input">
 
           <button>
             <span>Adicione uma nova formação</span>
@@ -321,7 +345,7 @@
 
         <!--Objetivos Profissionais-->
         <fieldset class="objective">
-          <legend>Objetivos profissionais: </legend>
+          <legend>Objetivos profissionais </legend>
 
           <textarea name="professional-objective" id="professional-objective" cols="30" rows="10" required placeholder="Detalhe seus objetivos profissionais"></textarea>
         </fieldset>
@@ -331,7 +355,48 @@
         <legend>Habilidades</legend>
         <textarea name="personal-skills" id="personal-skills" cols="30" rows="10" placeholder="Detalhe hard e soft skills que possui!"></textarea>
       </fieldset>
-        
+
+      <!--Experiências Profissionais-->
+      <fieldset class="experience">
+        <legend>Experiências Profissionais </legend>
+        <label for="org">Organização:</label>
+        <input type="text"  class="text-input" id="org">
+        <label for="role">Cargo: </label>
+        <input type="text" class="text-input" id="role">
+        <label for="professional-area">Área Profissional: </label>
+        <input type="text" class="text-input" id="professional-area">
+        <label for="salary">Salário:</label>
+        <input type="text" class="text-input" id="salary">
+        <label for="initial-date">Data de início: </label>
+        <input type="date" class="text-input" id="initial-date">
+        <label for="finishing-date" >Data de Saída: </label>
+        <input type="date" class="text-input" id="finishing-date">
+        <label for="responsibilities">Funções:</label>
+        <textarea id="responsibilities"></textarea>
+
+        <button>
+          <span>Adicione uma nova experiência</span>
+          <img src="../assets/add-formation.svg" alt="Adicione uma nova formação">
+        </button>
+      </fieldset> 
+
+      <!--Certificações-->
+      <fieldset class="certifications">
+        <legend>
+          Certificações
+        </legend>
+
+        <textarea name="certi" id="certi" cols="30" rows="10" placeholder="Coloque aqui todas as suas certificações :)"></textarea>
+      </fieldset>
+
+      <!--Idiomas-->
+      <fieldset class="languages">
+        <legend>Idiomas</legend>
+
+        <textarea name="language" id="language" cols="30" rows="10" placeholder="Descreva seus idiomas e nível de domínio. Ex: Inglês: Intermediário..."></textarea>
+      </fieldset>
+
+      <input type="submit" value="Concluir" class="submit"> 
       </form>
     </section>
   </main>
