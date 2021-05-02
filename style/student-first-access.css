@@ -4,7 +4,7 @@ header {
 }
 
 main {
-  width: 100vw;
+  width: 98vw;
   height: 80vh;
 }
 
@@ -130,4 +130,43 @@ textarea:active {
 
 .submit:hover {
   background-color: var(--emge-black);
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .submit {
+    height: 3rem;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .text-input {
+    width: 80%;
+  }
+
+  textarea {
+    width: 80%;
+  }
+
+  .submit {
+    font-size: 1.2rem;
+  }
+
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    textarea {
+      width: 70%;
+    }
+
+    .text-input {
+      width: 70%;
+    }
+
+    .submit {
+      height: 3.2rem;
+      font-size: 1.5rem;
+      width: 15rem;
+    }
+  }
 }
