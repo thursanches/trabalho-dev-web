@@ -15,7 +15,7 @@
     />
 
     <link rel="stylesheet" href="../style/main.css" />
-    <link rel="stylesheet" href="../style/recruiter-login.css" />
+    <link rel="stylesheet" href="../style/curriculo.css" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -25,9 +25,168 @@
   </head>
   <body>
     <!--Header-->
-    <header></header>
+    <header>
+      <a href="./student-login.html">
+        <img src="../assets/back-image.svg" alt="Voltar" />
+      </a>
+    </header>
     <!--Container Principal-->
-    <main></main>
+  <main>
+      <h1 class="welcome-message">
+        <p>Seu Curriculo</p>
+      </h1>
+      <section class="formulary">
+      <form action="" autocomplete="on" id="cv-form">
+        <!--Inserção de Foto-->
+        <div class="insert-photo">
+          <img src="../assets/add-pic.svg" alt="Adicione sua foto aqui"/>
+        </div>
+
+        <!--Informações Pessoais-->
+        <fieldset class="personal-informations">
+          <legend> Informações Pessoais </legend>
+            <label for="name">Nome: <b>Fulano de Tal da Silva</b></label>
+            <label for="name">Data de Nascimento: <b>01/01/0001</b></label>
+            <label for="civil-state">Estado Civil:<b> Solteiro</b></label>
+            <label for="nationality">Nacionalidade:<b> Brasileira</b></label>
+            <label for="gender">Gênero:<b>Masculino</b></label>
+          </p>
+        </fieldset>
+
+        <!-- Endereço -->
+        <fieldset class="adress">
+          <legend>Endereço</legend>
+          <label for="">CEP:<b>30150-250</b> </label>
+        
+
+          <label for="street">Logradouro:<b>Rua Álvares Maciel,628</b></label>
+ 
+          <label for="district">Bairro:<b>Santa Efigênia</b></label>
+
+          <label for="city">Cidade: <b>Belo Horizonte</b></label>
+
+          <label for="state">Estado: <b>Minas Gerais</b></label>
+        </fieldset>
+
+        <!-- Contatos -->
+        <fieldset class="contacts">
+            <legend>Contatos </legend>
+
+            <label for="email">E-mail: <b>email@email.com</b> </label>
+
+            <label for="tel">Telefone: <b>(31) 9 9999-9999</b> </label>
+            
+            <label for="linkedin">Linkedin: <b>fulanodetal</b> </label>
+
+            <label for="facebook">Facebook: <b>Fulano de Tal</b> </label>
+            
+            <label for="instagram">Instagram:<b>@fulanodetal</b> </label>
+            
+            <label for="other-social-media">Outra Rede Social:<b>Twitter @fulanodetal12</b> </label>
+
+        </fieldset>
+
+        <!-- Sobre mim -->
+
+        <fieldset class="about-me">
+          <legend>Sobre mim </legend>
+
+          <p class="text"><b>
+Sou uma pessoa carismatica, proativa que busca sempre aprender. Estou sempre disposto a me reinventar</br>
+visando o melhor para empresa e para o meu desenvolvimento profissional.
+</b></p>
+
+          <a style="color: red;">Clique aqui para ver o video de apresentação</a>
+        </fieldset>
+
+        <!-- Pessoa com deficiência -->
+        <fieldset class="deficiency">
+          <legend for="deficient-person">Pessoa com Deficiência?</legend>
+
+          
+          <label for="negative"><b>Não</b></label>
+        </fieldset>
+
+        <!--Formação Acadêmica-->
+        <fieldset class="academic-situation">
+          <legend>Formação Acadêmica </legend>
+
+          <label for="schooling">Nível de Escolaridade: <b> Ensino Superior Completo</b> </label>
+
+          <label for="graduation-type">Tipo de Formação: <b>Bacharelado</b> </label>
+
+          <label for="institution">Instituição de Ensino: <b>EMGE</b> </label>
+
+          <label for="course">Curso: <b>Ciência da computação</b> </label>
+
+          <label for="beginning-academic-date">Data de Início: <b>JAN/2016</b> </label>
+
+
+          <label for="finishing-academic-date">Término: <b>DEZ/2020</b></label>
+         
+        </fieldset>
+
+        <!--Objetivos Profissionais-->
+        <fieldset class="objective">
+          <legend>Objetivos profissionais </legend>
+
+          <p class="text"><b>
+            Busco me consolidar no mercado, visando sempre a evolução dos meus conhecimentos, </br>
+            almejando alem do reconhecimento profissional, o crescimento e os interesses da empresa.
+            </b></p>
+        </fieldset>
+
+      <!--Habilidades-->
+      <fieldset class="skills">
+        <legend>Habilidades</legend>
+        <p class="text"><b>
+          c# </br>
+          react</br>
+          JS<br>
+          SQL</br>
+        </b></p>
+      </fieldset>
+      </fieldset>
+
+      <!--Experiências Profissionais-->
+      <fieldset class="experience">
+        <legend>Experiências Profissionais </legend>
+        <label for="org">Organização:<b>Fictícia LTDA</b></label>
+        <label for="role">Cargo: <b>Desenvolvedor JR.</b> </label>
+        <label for="professional-area">Área Profissional: <b>TI</b> </label>
+        <label for="salary">Salário: <b>R$3.000,00</b></label>
+        <label for="initial-date">Data de início: <b>Fev/2018</b> </label>
+        <label for="finishing-date" >Data de Saída: <b>Mar/2021</b></label>
+        <label for="responsibilities">Funções:<b>Desevolvimento e manutenção de sistem voltado para o varejo</b></label>
+
+      </fieldset> 
+
+      <!--Certificações-->
+      <fieldset class="certifications">
+        <legend>
+          Certificações
+        </legend>
+        <p class="text"><b>
+          Computação em núvem AWS</br>
+          Data Analytics</br>
+          JS Intermediario<br>
+        </b></p>
+       
+      </fieldset>
+
+      <!--Idiomas-->
+      <fieldset class="languages">
+        <legend>Idiomas</legend>
+
+        <p class="text"><b>
+          Inglês tecnico </br>
+          
+        </b></p>
+      </fieldset>
+      <input type="submit" value="Editar" class="submit" onclick="location.href='student-first-access.html'"> 
+      </form>
+    </section>
+  </main>
 
     <!--Footer -->
     <footer></footer>
