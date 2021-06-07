@@ -11,5 +11,6 @@ urlpatterns = [
          name='create-account-recruiter'),
     path('reset-password/', resetPassword, name='reset-password'),
     path('landing-page-recruiter/', landingPageRecruiter,
-         name='landing-page-recruiter')
+         name='landing-page-recruiter'),
+    path('curriculum/', curriculum, name='curriculum')
 ]
