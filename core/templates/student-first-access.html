@@ -14,8 +14,13 @@
       type="image/x-icon"
     />
 
-    <link rel="stylesheet" href="../style/main.css" />
-    <link rel="stylesheet" href="../style/student-first-access.css" />
+    {% load static %}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'core/main.css' %}"
+    />
+    <link rel="stylesheet" href="{% static 'core/student-first-access.css' %}" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link

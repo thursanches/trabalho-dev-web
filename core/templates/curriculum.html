@@ -14,8 +14,9 @@
       type="image/x-icon"
     />
 
-    <link rel="stylesheet" href="../style/main.css" />
-    <link rel="stylesheet" href="../style/curriculo.css" />
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'core/main.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'core/curriculo.css' %}" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link

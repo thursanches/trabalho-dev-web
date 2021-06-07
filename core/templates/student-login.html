@@ -14,8 +14,13 @@
       href="../assets/job-search.svg"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="../style/main.css" />
-    <link rel="stylesheet" href="../style/recruiter-login.css" />
+    {% load static %}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'core/main.css' %}"
+    />
+    <link rel="stylesheet" href="{% static 'core/recruiter-login.css' %}" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link

@@ -13,8 +13,18 @@
       href="../assets/job-search.svg"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="./style/main.css" />
-    <link rel="stylesheet" href="./style/home-page.css" />
+
+    {% load static %}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'core/main.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'core/home-page.css' %}"
+    />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
