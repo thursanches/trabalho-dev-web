@@ -8,11 +8,7 @@
       <div class="header-btns">
         <button class="btn-back">
           <a href="{% url 'recruiter-login'%}">
-            <img
-              src="{% static '/assets/back-image.svg' %}"
-              alt="Voltar para a página anterior"
-              role="button"
-            />
+           {%include 'partials/back-button.html' %}
           </a>
         </button>
       </div>

@@ -1,0 +1,12 @@
+{% load static %}
+<!--Header-->
+<header>
+<div class="header-btns">
+    <button class="btn-back">
+    <a href="{% url 'index' %}">
+        {%include 'partials/back-button.html' %}
+    </a>
+    </button>
+    <a href="{% url 'create-account-recruiter'%}" class="btn-createAccount-header">Crie uma Conta</a>
+</div>
+</header>

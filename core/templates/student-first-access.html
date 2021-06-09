@@ -10,7 +10,7 @@
     <!--Header-->
     <header>
       <a href="{% url 'student-login'%}">
-        <img src="{% static 'assets/back-image.svg'%}" alt="Voltar" />
+        {% include 'partials/back-button.html' %}
       </a>
     </header>
     <!--Container Principal-->

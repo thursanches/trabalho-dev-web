@@ -7,76 +7,8 @@
   href="{% static 'css/recruiter-login.css' %}"
 />
 {% endblock specific_css %}
-    <!--Header-->
-    <header>
-      <div class="header-btns">
-        <button class="btn-back">
-          <a href="{% url 'index' %}">
-            <img
-            src=" {% static '/assets/back-image.svg' %}"
-            alt="Voltar para a página anterior"
-            role="button"
-            
-          />
-          </a>
-        </button>
-        <a href="{% url 'create-account-recruiter'%}" class="btn-createAccount-header">Crie uma Conta</a>
-      </div>
-    </header>
-    <!--Container Principal-->
-    <main>
-      <section class="container">
-        <img src="{% static '/assets/logo-emge.svg'%}" alt="Logo da EMGE" class="logo" />
-        <h1 class="welcome-headline">
-          Olá, Recrutador!
-          <p>Já possui conta? Faça o login!</p>
-          <p>Não possui? Basta se cadastrar para começar a utilizar</p>
-        </h1>
-          <!-- Formulário de login -->
-          <form action="">
-
-            <div class="login-email">
-                <label for="email">E-mail:</label>
-                <input
-                type="email"
-                id="email"
-                class="login-entry"
-                placeholder="Digite o seu e-mail"
-                autocomplete="on"
-                autofocus
-                required
-                />
-            </div>
-
-
-            <div class="login-senha">
-
-                <label for="password">Senha:</label>
-                <input
-                type="password"
-                id="password"
-                class="login-entry"
-                placeholder="Digite a sua senha"
-                autocomplete="on"
-                maxlength="10"
-                minlength="4"
-                autofocus
-                required
-                />
-            </div>
-
-            <button class="btn-forgot-password" onclick="location.href='{% url 'reset-password' %}'">Esqueceu a senha?</button>
-
-            <!--
-              <input type="submit" value="Entrar" class="btn-login"/> 
-            -->
-
-            <a href="{% url 'landing-page-recruiter'%}" class="btn-login">Entrar</a>
-           
-          </form>
-        </div>
-      </section>
-    </main>
+    {% include 'partials/login-header.html' %}
+    {% include 'partials/login-main.html' %}
 
   <!--Footer -->
     <footer>
