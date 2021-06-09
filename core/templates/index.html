@@ -1,56 +1,33 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Base de Currículos - EMGE</title>
+{% extends 'base.html' %} {% load static %} {% block content %} 
 
-    <!-- Styles e fonte -->
+{% block specific_css %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'css/home-page.css' %}"
+/>
+{% endblock specific_css %}
+<!-- Logo no Header -->
+<header>
+  <img src="{% static '/assets/logo-emge.svg'%}" alt="Logo da EMGE" />
+</header>
+<main>
+  <!--Container principal-->
+  <section class="container">
+    <h1 class="welcome-headline">
+      Bem-vindo(a) à base de Currículos da Escola de Engenharia de Minas Gerais.
+    </h1>
 
-    <link
-      rel="shortcut icon"
-      href=" {% static '/assets/job-search.svg'%}"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{% static 'css/home-page.css' %}"
-    />
+    <!-- Seleção de Role do Usuário-->
+    <div class="selection">
+      <p>Você é um recrutador ou um aluno?</p>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- Logo no Header -->
-    <header>
-      <img src="{% static '/assets/logo-emge.svg'%}" alt="Logo da EMGE" />
-    </header>
-    <main>
-      <!--Container principal-->
-      <section class="container">
-        <h1 class="welcome-headline">
-          Bem-vindo(a) à base de Currículos da Escola de Engenharia de Minas
-          Gerais.
-        </h1>
+      <a class="btn-role" href=" {% url 'recruiter-login'%}">Recrutador</a>
 
-        <!-- Seleção de Role do Usuário-->
-        <div class="selection">
-          <p>Você é um recrutador ou um aluno?</p>
-
-          <a class="btn-role" href=" {% url 'recruiter-login'%}">Recrutador</a>
-
-          <a class="btn-role" href="{% url 'student-login'%}">Aluno</a>
-        </div>
-      </section>
-    </main>
-    <!--Footer-->
-    <footer></footer>
-  </body>
-</html>
+      <a class="btn-role" href="{% url 'student-login'%}">Aluno</a>
+    </div>
+  </section>
+</main>
+<!--Footer-->
+<footer></footer>
+{% endblock %}

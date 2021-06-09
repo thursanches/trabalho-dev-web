@@ -1,35 +1,12 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Base de Currículos - EMGE</title>
+{% extends 'base.html' %} {% load static %} {% block content %} 
 
-    <!--Styles e fonte-->
-
-
-    <link
-      rel="shortcut icon"
-      href="{% static '/assets/job-search.svg' %}"
-      type="image/x-icon"
-    />
-    
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{% static 'main.css' %}"
-    />
-    <link rel="stylesheet" href="{% static 'css/recruiter-login.css' %}" />
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
+{% block specific_css %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'css/recruiter-login.css' %}"
+/>
+{% endblock specific_css %}
     <!--Header-->
     <header>
       <div class="header-btns">
@@ -94,7 +71,7 @@
               <input type="submit" value="Entrar" class="btn-login"/> 
             -->
 
-            <a href="./landing-page-recrutador.html" class="btn-login">Entrar</a>
+            <a href="{% url 'landing-page-recruiter'%}" class="btn-login">Entrar</a>
            
           </form>
         </div>
@@ -107,5 +84,4 @@
         Não possui uma conta? Crie aqui!
       </a>
     </footer>
-  </body>
-</html>
+{% endblock %}
