@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -12,13 +13,13 @@
 
     <link
       rel="shortcut icon"
-      href="../assets/job-search.svg"
+      href=" {% static '/assets/job-search.svg'%}"
       type="image/x-icon"
     />
 
-    {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'core/main.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'core/criar-conta-recrutador.css' %}"/>
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/criar-conta-recrutador.css' %}"/>
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -32,9 +33,9 @@
     <header>
       <div class="header-btns">
         <button class="btn-back">
-          <a href="./recruiter-login.html">
+          <a href="{% url 'recruiter-login'%}">
             <img
-              src="../assets/back-image.svg"
+              src="{% static '/assets/back-image.svg' %}"
               alt="Voltar para a página anterior"
               role="button"
             />
@@ -128,7 +129,7 @@
         -->
 
             <a
-              href="./landing-page-recrutador.html"
+              href="{% url 'landing-page-recruiter'%}"
               value="Criar Conta"
               class="btn-login"
               >Criar Conta</a

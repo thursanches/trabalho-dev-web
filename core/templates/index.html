@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -10,20 +11,14 @@
 
     <link
       rel="shortcut icon"
-      href="../assets/job-search.svg"
+      href=" {% static '/assets/job-search.svg'%}"
       type="image/x-icon"
     />
-
-    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}" />
     <link
       rel="stylesheet"
       type="text/css"
-      href="{% static 'core/main.css' %}"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{% static 'core/home-page.css' %}"
+      href="{% static 'css/home-page.css' %}"
     />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -35,7 +30,7 @@
   <body>
     <!-- Logo no Header -->
     <header>
-      <img src="./assets/logo-emge.svg" alt="Logo da EMGE" />
+      <img src="{% static '/assets/logo-emge.svg'%}" alt="Logo da EMGE" />
     </header>
     <main>
       <!--Container principal-->
@@ -49,9 +44,9 @@
         <div class="selection">
           <p>Você é um recrutador ou um aluno?</p>
 
-          <a class="btn-role" href="./pages/recruiter-login.html">Recrutador</a>
+          <a class="btn-role" href=" {% url 'recruiter-login'%}">Recrutador</a>
 
-          <a class="btn-role" href="./pages/student-login.html">Aluno</a>
+          <a class="btn-role" href="{% url 'student-login'%}">Aluno</a>
         </div>
       </section>
     </main>

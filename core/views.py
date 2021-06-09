@@ -14,7 +14,7 @@ def recruiterLogin(request):
 
 
 def resetPassword(request):
-    return render(request, 'reser-password.html')
+    return render(request, 'reset-password.html')
 
 
 def createAccountRecruiter(request):

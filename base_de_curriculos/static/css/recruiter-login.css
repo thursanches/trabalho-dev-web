@@ -1,0 +1,268 @@
+/* Header */
+header {
+  height: 10vh;
+  width: 100%;
+}
+
+.header-btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 10px 8px 0 8px;
+}
+
+.btn-createAccount-header {
+  color: #002e3b;
+
+  font-size: 12px;
+  line-height: 19.5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-createAccount-header:hover {
+  color: #cc3547;
+  transition: 0.5s;
+}
+
+/* Main */
+
+main {
+  height: 80vh;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+
+.welcome-headline {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+
+  margin: 1.5rem 0 0 2rem;
+
+  width: 19rem;
+
+  color: #333333;
+}
+
+.login-email {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 35px 0px 5px 10px;
+  cursor: auto;
+}
+
+.login-senha {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0px 20px 10px;
+}
+
+.login-entry {
+  border: 0.5px solid black;
+  border-radius: 10px;
+
+  font-weight: 400;
+  color: #555555;
+
+  width: 16rem;
+  height: 20px;
+  padding: 0.2rem;
+  margin-left: 10px;
+
+  text-align: center;
+
+  fill: #ffff;
+  cursor: auto;
+}
+
+.btn-forgot-password {
+  display: flex;
+  align-items: flex-end;
+
+  margin: -14px 0 3rem 185px;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--dark-blue);
+}
+
+.btn-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto;
+  width: 14rem;
+  height: 2.7rem;
+
+  background: var(--emge-red);
+  border: none;
+  border-radius: 1rem;
+  margin-top: 2rem;
+
+  font-family: Lato, sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--emge-black);
+}
+
+/* Footer */
+
+.createAccount-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #002e3b;
+
+  font-size: 12px;
+  line-height: 19.5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.createAccount-footer:hover {
+  color: #cc3547;
+  transition: 0.5s;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .header-btns {
+    font-size: 1rem;
+  }
+
+  .welcome-headline {
+    margin-top: 0.5rem;
+    font-size: 1.5;
+  }
+
+  .login-entry {
+    width: 18rem;
+    height: 1.2rem;
+  }
+
+  .btn-forgot-password {
+    font-size: 0.9rem;
+  }
+
+  .btn-login {
+    width: 15rem;
+    height: 3rem;
+  }
+
+  .createAccount-footer {
+    font-size: 0.9rem;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .header-btns {
+    font-size: 1.2rem;
+  }
+
+  .welcome-headline {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    width: 20rem;
+  }
+
+  .login-entry {
+    width: 19rem;
+    height: 1.4rem;
+  }
+
+  .btn-forgot-password {
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+
+  .btn-login {
+    width: 16rem;
+    height: 3.4rem;
+    cursor: pointer;
+  }
+
+  .createAccount-footer {
+    font-size: 1rem;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .header-btns {
+    font-size: 1.4rem;
+  }
+
+  .welcome-headline {
+    margin-bottom: 1.3rem;
+    font-size: 1.7rem;
+    line-height: 2rem;
+    width: 22rem;
+  }
+
+  .login-entry {
+    width: 20rem;
+    height: 1.6rem;
+  }
+
+  .btn-forgot-password {
+    font-size: 1rem;
+  }
+
+  .btn-login {
+    width: 18rem;
+    height: 3.7rem;
+    margin-top: 6rem;
+  }
+
+  .createAccount-footer {
+    font-size: 1.2rem;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .header-btns {
+    font-size: 1.6rem;
+  }
+
+  .welcome-headline {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    width: 26rem;
+  }
+
+  .login-entry {
+    width: 24rem;
+    height: 2rem;
+  }
+
+  .btn-forgot-password {
+    font-size: 1rem;
+    padding-left: 6rem;
+  }
+
+  .btn-login {
+    width: 20rem;
+    height: 4rem;
+    margin-top: 2rem;
+  }
+
+  .createAccount-footer {
+    font-size: 1rem;
+  }
+}

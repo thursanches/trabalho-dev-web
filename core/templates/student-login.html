@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -11,16 +12,16 @@
 
     <link
       rel="shortcut icon"
-      href="../assets/job-search.svg"
+      href=" {% static '/assets/job-search.svg'%}"
       type="image/x-icon"
     />
-    {% load static %}
+    
     <link
       rel="stylesheet"
       type="text/css"
-      href="{% static 'core/main.css' %}"
+      href="{% static 'main.css' %}"
     />
-    <link rel="stylesheet" href="{% static 'core/recruiter-login.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/recruiter-login.css' %}" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -33,22 +34,22 @@
     <header>
       <div class="header-btns">
         <button class="btn-back">
-          <a href="../index.html">
+          <a href="{% static 'index'%}">
             <img
-            src="../assets/back-image.svg"
+            src=" {% static '/assets/back-image.svg'%}"
             alt="Voltar para a página anterior"
             role="button"
             
           />
           </a>
         </button>
-        <a class="btn-createAccount-header">Crie uma Conta</a>
+        <a href="{% url 'student-first-access'%}" class="btn-createAccount-header">Crie uma Conta</a>
       </div>
     </header>
     <!--Container Principal-->
     <main>
       <section class="container">
-        <img src="../assets/logo-emge.svg" alt="Logo da EMGE" class="logo" />
+        <img src="{% static '/assets/logo-emge.svg'%}" alt="Logo da EMGE" class="logo" />
         <h1 class="welcome-headline">
           Olá, Aluno!
           <p>Já possui conta? Faça o login!</p>
@@ -87,8 +88,8 @@
                 />
             </div>
 
-            <button class="btn-forgot-password" onclick="location.href='reset-password.html'">Esqueceu a senha?</button>
-           <input type="submit" value="Entrar" class="btn-login" onclick="location.href='curriculo.html'"/> 
+            <button class="btn-forgot-password" onclick="location.href='{% url 'reset-password'%}'">Esqueceu a senha?</button>
+           <input type="submit" value="Entrar" class="btn-login" onclick="location.href='{% url 'curriculum'%}'"/> 
           </form>
         </div>
       </section>
@@ -96,7 +97,7 @@
 
   <!--Footer -->
     <footer>
-      <a class="createAccount-footer" href="./student-first-access.html">
+      <a class="createAccount-footer" href="{% url 'student-first-access'%}">
         Não possui uma conta? Crie aqui!
       </a>
     </footer>

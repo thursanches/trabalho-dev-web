@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -10,16 +11,15 @@
     <!--Styles e fonte-->
 
 
-    <link rel="shortcut icon" href="../assets/job-search.svg" type="image/x-icon" />
+    <link rel="shortcut icon" href=" {% static '/assets/job-search.svg'%}" type="image/x-icon" />
 
     
-    {% load static %}
     <link
       rel="stylesheet"
       type="text/css"
-      href="{% static 'core/main.css' %}"
+      href="{% static 'main.css' %}"
     />
-    <link rel="stylesheet" type="text/css" href="{% static 'core/landing-page-recrutador.css'%}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/landing-page-recrutador.css'%}" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -32,8 +32,8 @@
     <header>
         <div class="header-btns">
             <button class="btn-back">
-                <a href="../index.html">
-                    <img src="../assets/back-image.svg" alt="Ir para o menu" role="button" />
+                <a href="{% url 'index' %}">
+                    <img src=" {% static '/assets/back-image.svg'%}" alt="Ir para o login" role="button" />
                 </a>
             </button>
         </div>
@@ -41,7 +41,7 @@
     <!--Container Principal-->
     <main>
         <section class="container">
-            <img src="../assets/logo-emge.svg" alt="Logo da EMGE" class="logo" />
+            <img src=" {% static '/assets/logo-emge.svg'%}" alt="Logo da EMGE" class="logo" />
 
             <h1 class="welcome-headline">
                 Oi, Recrutador!
@@ -57,7 +57,7 @@
                 autofocus required />
 
                 <button type="submit" class="btnBusca"> Buscar
-                    <img src="../assets/lupa.svg" 
+                    <img src=" {% static '/assets/lupa.svg' %}" 
                     alt="Buscar"/>
                 </button>
             </div>

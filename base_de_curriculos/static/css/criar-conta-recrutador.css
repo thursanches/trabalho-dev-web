@@ -1,0 +1,162 @@
+/* Header */
+header {
+  height: 10vh;
+  width: 100%;
+}
+
+.header-btns {
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+}
+
+/* Main */
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.welcome-headline {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 0 auto;
+
+  width: 19rem;
+
+  text-align: center;
+  color: #333333;
+}
+
+.login-entry {
+  border: 0.5px solid black;
+  border-radius: 10px;
+
+  font-weight: 400;
+  color: #555555;
+
+  width: 16rem;
+  height: 20px;
+  padding: 0.2rem;
+  margin-left: 10px;
+  margin-bottom: 0.5rem;
+
+  text-align: center;
+
+  fill: #ffff;
+  cursor: pointer;
+}
+
+.btn-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto;
+  width: 14rem;
+  height: 2.7rem;
+
+  background: var(--emge-red);
+  border: none;
+  border-radius: 1rem;
+  margin-top: 2rem;
+
+  font-family: Lato, sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--emge-black);
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .header-btns {
+    font-size: 1rem;
+  }
+
+  .welcome-headline {
+    font-size: 1.5;
+  }
+
+  .login-entry {
+    width: 18rem;
+    height: 1.2rem;
+  }
+
+  .btn-login {
+    width: 15rem;
+    height: 3rem;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .header-btns {
+    font-size: 1.2rem;
+  }
+
+  .welcome-headline {
+    font-size: 1.6rem;
+    width: 20rem;
+  }
+
+  .login-entry {
+    width: 19rem;
+    height: 1.4rem;
+  }
+
+  .btn-login {
+    width: 16rem;
+    height: 3.4rem;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .header-btns {
+    font-size: 1.4rem;
+  }
+
+  .welcome-headline {
+    font-size: 1.7rem;
+    line-height: 2rem;
+    width: 22rem;
+  }
+
+  .login-entry {
+    width: 20rem;
+    height: 1.6rem;
+  }
+
+  .btn-login {
+    width: 18rem;
+    height: 3.7rem;
+    margin-top: 6rem;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .header-btns {
+    font-size: 1.6rem;
+  }
+
+  .welcome-headline {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    width: 26rem;
+  }
+
+  .login-entry {
+    width: 24rem;
+    height: 2rem;
+  }
+
+  .btn-login {
+    width: 20rem;
+    height: 4rem;
+    margin-top: 2rem;
+  }
+}

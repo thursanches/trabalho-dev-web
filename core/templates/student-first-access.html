@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -10,7 +11,7 @@
 
     <link
       rel="shortcut icon"
-      href="../assets/job-search.svg"
+      href=" {% static '/assets/job-search.svg'%}"
       type="image/x-icon"
     />
 
@@ -18,9 +19,9 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="{% static 'core/main.css' %}"
+      href="{% static 'main.css' %}"
     />
-    <link rel="stylesheet" href="{% static 'core/student-first-access.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/student-first-access.css' %}" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -31,8 +32,8 @@
   <body>
     <!--Header-->
     <header>
-      <a href="./student-login.html">
-        <img src="../assets/back-image.svg" alt="Voltar" />
+      <a href="{% url 'student-login'%}">
+        <img src="{% static 'assets/back-image.svg'%}" alt="Voltar" />
       </a>
     </header>
     <!--Container Principal-->
@@ -50,7 +51,7 @@
       <form action="" autocomplete="on" id="cv-form">
         <!--Inserção de Foto-->
         <div class="insert-photo">
-          <img src="../assets/add-pic.svg" alt="Adicione sua foto aqui"/>
+          <img src=" {% static '/assets/add-pic.svg'%}" alt="Adicione sua foto aqui"/>
 
         
           <label for="add-photo">Adicione sua foto: </label>
