@@ -1,16 +1,15 @@
 from django.urls import path
-from .views import index, studentFirstAccess, studentLogin, curriculum, landingPageRecruiter, recruiterLogin, resetPassword, createAccountRecruiter
+from .views import index, studentFirstAccess, resume, landingPage, login, resetPassword, createAccount
 
 urlpatterns = [
     path('', index, name='index'),
-    path('student-login/', studentLogin, name='student-login'),
-    path('recruiter-login/', recruiterLogin, name='recruiter-login'),
+    path('login/', login, name='login'),
     path('student-first-access/', studentFirstAccess,
          name='student-first-access'),
-    path('create-account-recruiter/', createAccountRecruiter,
-         name='create-account-recruiter'),
+    path('create-account/', createAccount,
+         name='create-account'),
     path('reset-password/', resetPassword, name='reset-password'),
-    path('landing-page-recruiter/', landingPageRecruiter,
-         name='landing-page-recruiter'),
-    path('curriculum/', curriculum, name='curriculum')
+    path('landing-page/', landingPage,
+         name='landing-page'),
+    path('resume/', resume, name='resume')
 ]

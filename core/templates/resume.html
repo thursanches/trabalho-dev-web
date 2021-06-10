@@ -1,11 +1,11 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
 
 {% block specific_css %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/curriculo.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/resume.css' %}" />
 {% endblock specific_css %}
     <!--Header-->
     <header>
-      <a href="{% url 'student-login'%}">
+      <a href="{% url 'landing-page'%}">
         {%include 'partials/back-button.html' %}
       </a>
     </header>

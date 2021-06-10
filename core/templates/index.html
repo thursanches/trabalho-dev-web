@@ -4,9 +4,9 @@
 <link
   rel="stylesheet"
   type="text/css"
-  href="{% static 'css/home-page.css' %}"
+  href="{% static 'css/home.css' %}"
 />
-{% endblock specific_css %}
+{% endblock %}
 <!-- Logo no Header -->
 <header>
   {% include 'partials/logo-img.html'%}
@@ -18,14 +18,7 @@
       Bem-vindo(a) à base de Currículos da Escola de Engenharia de Minas Gerais.
     </h1>
 
-    <!-- Seleção de Role do Usuário-->
-    <div class="selection">
-      <p>Você é um recrutador ou um aluno?</p>
-
-      <a class="btn-role" href=" {% url 'recruiter-login'%}">Recrutador</a>
-
-      <a class="btn-role" href="{% url 'student-login'%}">Aluno</a>
-    </div>
+      <a class="entry-btn" href=" {% url 'login'%}">Faça seu login</a>
   </section>
 </main>
 <!--Footer-->

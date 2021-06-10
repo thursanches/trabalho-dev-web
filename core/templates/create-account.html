@@ -1,13 +1,13 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
 
 {% block specific_css %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/criar-conta-recrutador.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/create-account.css' %}" />
 {% endblock specific_css %}
     <!--Header-->
     <header>
       <div class="header-btns">
         <button class="btn-back">
-          <a href="{% url 'recruiter-login'%}">
+          <a href="{% url 'login'%}">
            {%include 'partials/back-button.html' %}
           </a>
         </button>
@@ -99,7 +99,7 @@
         -->
 
             <a
-              href="{% url 'landing-page-recruiter'%}"
+              href="{% url 'landing-page'%}"
               value="Criar Conta"
               class="btn-login"
               >Criar Conta</a

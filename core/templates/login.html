@@ -4,7 +4,7 @@
 <link
   rel="stylesheet"
   type="text/css"
-  href="{% static 'css/recruiter-login.css' %}"
+  href="{% static 'css/login.css' %}"
 />
 {% endblock specific_css %}
     {% include 'partials/login-header.html' %}
@@ -12,7 +12,7 @@
 
   <!--Footer -->
     <footer>
-      <a class="createAccount-footer" href="{% url 'student-first-access'%}">
+      <a href="{% url 'create-account'%}" class="createAccount-footer">
         Não possui uma conta? Crie aqui!
       </a>
     </footer>
