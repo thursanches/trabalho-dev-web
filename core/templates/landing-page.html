@@ -45,6 +45,15 @@
                 <br>
                 Ex: habilidades, endereço, certificações, experiências, entre outros! </p>
             </br>
+            
+            <div>
+            <h2 class="resume-headline">Veja os currículos já cadastrados: </h2>
+            <dl class="resume-list">
+            {% for key, value in resume_items.items%}
+                <dt class="resume-info"> {{ resume_items.curriculum.name }} | {{ resume_items.curriculum.age }} | {{ resume_items.curriculum.skills }} | {{resume_items.curriculum.city}} </dt>
+                <dd class="resume-description"> {{ resume_items.curriculum.description}} </dd> <br>
+            {% endfor %}
+            </dl>
             </div>
         </section>
     </main>

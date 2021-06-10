@@ -22,7 +22,21 @@ def studentFirstAccess(request):
 
 
 def landingPage(request):
-    return render(request, 'landing-page.html')
+
+    resume = {
+        'curriculum': {
+            'name': 'Juan Pablor',
+            'age': '20 anos',
+            'skills': 'JS, React, Django',
+            'city': 'Ibirité',
+            'description': 'O brabor de ibirité, DJ Azeitona'
+        }
+    }
+
+    data = {
+        'resume_items': resume
+    }
+    return render(request, 'landing-page.html', data)
 
 
 def resume(request):
