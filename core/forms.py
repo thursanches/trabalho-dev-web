@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import ModelForm
-from core.models import resume
+from core.models import Resume
 from localflavor.br.forms import BRZipCodeField
 
 

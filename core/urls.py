@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import index, studentFirstAccess, resume, landingPage, login, resetPassword, createAccount
+from .views import index, studentFirstAccess, resume, landingPage, login, resetPassword, createAccount, search
 
 urlpatterns = [
     path('', index, name='index'),
@@ -11,5 +11,6 @@ urlpatterns = [
     path('reset-password/', resetPassword, name='reset-password'),
     path('landing-page/', landingPage,
          name='landing-page'),
-    path('resume/', resume, name='resume')
+    path('<int:resume_id>', resume, name='resume'),
+    path('search', search, name='search')
 ]

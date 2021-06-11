@@ -2,10 +2,9 @@ from django.db import models
 from datetime import datetime
 from django.utils.translation import gettext_lazy as _
 from localflavor.br.models import BRPostalCodeField, BRStateField
-from localflavor.br.br_states import STATE_CHOICES
 
 
-class resume(models.Model):
+class Resume(models.Model):
 
     class civilState(models.TextChoices):
         SINGLE = 'Solteiro(a)', _('Solteiro(a)')
@@ -56,7 +55,8 @@ class resume(models.Model):
 
     # Profile Image
     # Necessário configura o Media Root
-    profile_image = models.ImageField("Imagem de Perfil", blank="true")
+    profile_image = models.ImageField(
+        "Imagem de Perfil", upload_to='pictures/%d/%m/%Y/', blank="true",)
 
     # Informações pessoais
     name = models.CharField("Nome Completo", max_length=200)
@@ -64,7 +64,7 @@ class resume(models.Model):
 
     civil_state = models.CharField("Estado Civil",
                                    max_length=13, choices=civilState.choices, default=civilState.SINGLE)
-    nationality = models.CharField(max_length=50)
+    nationality = models.CharField("Nacionalidade", max_length=50)
 
     gender = models.CharField(
         "Gênero", choices=genderChoices.choices, max_length=9)
@@ -75,7 +75,7 @@ class resume(models.Model):
     street = models.CharField("Logradouro", max_length=100)
     district = models.CharField("Bairro", max_length=100)
     city = models.CharField("Cidade", max_length=100)
-    state = models.CharField("Estado", max_length=50)
+    state = BRStateField("Estado", max_length=50)
 
     # Contatos
 

@@ -11,7 +11,7 @@
     <header>
         <div class="header-btns">
             <button class="btn-back">
-                <a href="{% url 'index' %}">
+                <a href="{% url 'landing-page' %}">
                     {%include 'partials/back-button.html' %}
                 </a>
             </button>
@@ -20,13 +20,6 @@
     <!--Container Principal-->
     <main>
         <section class="container">
-            {% include 'partials/logo-img.html'%}
-
-            <h1 class="welcome-headline">
-                Oi! :)
-                <p>Busque currículos de alunos por palavras chave para a vaga que você precisa.</p>
-            </h1>
-            <!-- Campo de pesquisar -->
 
 
             <div class="divBusca">
@@ -43,21 +36,24 @@
 
                 </form>
             </div>
+            
+            <!-- Campo de pesquisar -->
 
             <p class="examples">
                 <br>
-                Ex: habilidades, endereço, certificações, experiências, entre outros! </p>
             </br>
             
             <div>
-            <h2 class="resume-headline">Veja os currículos já cadastrados: </h2>
+           
             <dl class="resume-list">
             {% if resumes %}
+             <h2 class="resume-headline">Veja o que encontramos para a sua busca: </h2>
             {% for resume in resumes %}
                 <dt class="resume-info"> <a href="{% url 'resume' resume.resume_id %}"> {{ resume.name }} | {{ resume.birthday }} | {{ resume.skills }} | {{resume.city}} - {{ resume.state }} </a> </dt>
                 <dd class="resume-description"> {{ resume.description}} </dd> <br>
             {% endfor %}
             {% else %}
+             <h2 class="resume-headline"> Não encontramos correspondências para a sua pesquisa :/ </h2>
             {% endif %}
             </dl>
             </div>
