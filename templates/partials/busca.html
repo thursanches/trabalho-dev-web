@@ -1,0 +1,15 @@
+ {% load static%}
+ <div class="divBusca">
+
+ <form action="{% url 'search' %}">
+    {% csrf_token %}
+
+    <input type="text" id="search" class="searcher-entry" name="search" placeholder="busque currículos de alunos" autocomplete="on" />
+
+    <button type="submit" class="btnBusca"> Buscar
+        <img src=" {% static '/assets/lupa.svg' %}" 
+    alt="Buscar"/>
+    </button>
+
+ </form>
+</div>

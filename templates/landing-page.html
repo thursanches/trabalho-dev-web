@@ -1,0 +1,67 @@
+{% extends 'base.html' %} {% load static %} {% block content %} 
+
+{% block specific_css %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'css/landing-page.css' %}"
+/>
+{% endblock specific_css %}
+    <!--Header-->
+    <header>
+        <nav class="header-btns">
+            <ul>
+
+                {% if user.is_authenticated %}
+                <li><p class="btn-back">
+                    Olá, {{user.username}}
+                </p></li>
+
+                <li><a href="#">perfil</a></li>
+                <li><a href="#">currículo</a></li>
+                <li><a href={% url 'logout'%}>logout</a></li>
+
+                {% else %}
+                <a href="{%url 'login' %}">Faça seu login</a>
+                {% endif %} 
+            </ul>
+        </nav>
+    </header>
+    <!--Container Principal-->
+    <main>
+        <section class="container">
+            {% include 'partials/logo-img.html'%}
+
+            <h1 class="welcome-headline">
+                Oi! :)
+                <p>Busque currículos de outras pessoas por palavras chave para a vaga que você precisa.</p>
+            </h1>
+            <!-- Campo de pesquisar -->
+
+
+           {% include 'partials/busca.html'%}
+
+            <p class="examples">
+                <br>
+                Ex: habilidades, endereço, certificações, experiências, entre outros! </p>
+            </br>
+            
+            <div>
+            <h2 class="resume-headline">Veja os currículos já cadastrados: </h2>
+            <dl class="resume-list">
+            {% if resumes %}
+            {% for resume in resumes %}
+                <dt class="resume-info"> <a href="{% url 'resume' resume.resume_id %}"> {{ resume.name }} | {{ resume.birthday }} | {{ resume.skills }} | {{resume.city}} - {{ resume.state }} </a> </dt>
+                <dd class="resume-description"> {{ resume.description}} </dd> <br>
+            {% endfor %}
+            {% else %}
+            {% endif %}
+            </dl>
+            </div>
+        </section>
+    </main>
+
+    <!--Footer -->
+    <footer>
+    </footer>
+{% endblock %}

@@ -20,10 +20,12 @@
           <p>Crie sua conta</p>
         </h1>
         <!-- Formulário de login -->
-        <form action="" class="login-form">
+        <form action="{% url 'create-account' %}" method="POST" class="login-form">
+        {% csrf_token %}
             <label for="name">Nome:</label>
             <input
               type="name"
+              name="name"
               id="name"
               class="login-entry"
               placeholder="Digite o seu nome Completo"
@@ -35,6 +37,7 @@
             <label for="e-mail">E-mail:</label>
             <input
               type="email"
+              name="email"
               id="email"
               class="login-entry"
               placeholder="Digite seu e-mail"
@@ -48,6 +51,7 @@
             <label for="Confirme">Confirme o e-mail:</label>
             <input
               type="email"
+              name="email_confirmation"
               id="confirme"
               class="login-entry"
               placeholder="Confirmação"
@@ -60,10 +64,10 @@
             <input
               type="password"
               id="password"
+              name="password"
               class="login-entry"
               placeholder="Digite sua senha"
               autocomplete="on"
-              maxlength="10"
               minlength="4"
               autofocus
               required
@@ -73,37 +77,19 @@
             <input
               type="password"
               id="password"
+              name="password_confirmation"
               class="login-entry"
               placeholder="Confirmação"
               autocomplete="on"
-              maxlength="10"
               minlength="4"
               autofocus
               required
             />
 
-            <label for="enterprise">Empresa:</label>
-            <input
-              type="enterprise"
-              id="enterprise"
-              class="login-entry"
-              placeholder="Digite o nome da empresa"
-              autocomplete="on"
-              autofocus
-              required
-            />
-            <br />
 
-            <!--
+          
           <input type="submit" value="Criar Conta" class="btn-login" />
-        -->
-
-            <a
-              href="{% url 'landing-page'%}"
-              value="Criar Conta"
-              class="btn-login"
-              >Criar Conta</a
-            >
+        
           </div>
         </form>
       </section>
